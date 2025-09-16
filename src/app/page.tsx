@@ -47,6 +47,7 @@ export default function Home() {
     }
     async function fetchSilentHours() {
       try {
+        if (!user) return; // extra safety check
         const res = await fetch(`/api/silentHours?userId=${user.id}`);
         if (res.ok) {
           const data = await res.json();
