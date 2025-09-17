@@ -48,6 +48,6 @@ export default async function handler(req, res) {
     return res.status(200).json({ message: `Sent ${emailPromises.length} reminder email(s).` });
   } catch (err) {
     console.error('Unexpected error:', err);
-    return res.status(500).json({ error: 'Unexpected error occurred' });
+    return res.status(500).json({ error: 'Unexpected error occurredoreei' });
   }
 }
